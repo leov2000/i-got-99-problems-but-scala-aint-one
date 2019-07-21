@@ -13,7 +13,7 @@ object P03 extends App {
     @tailrec
     def iterate(acc: List[Int] = List[Int](), numList: List[Int]): Int =
       numList match {
-        case z if z.isEmpty => -1
+        case x if x.isEmpty => -1
         case x if acc.length == num => x.head
         case x:List[Int] => iterate(acc :+ x.head, x.tail)
         case _ => -1
